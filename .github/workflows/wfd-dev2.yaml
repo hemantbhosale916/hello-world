@@ -15,5 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
+        echo "running from dev branch"
         echo "Hello ${{ github.event.inputs.name }}!"
         echo "- in ${{ github.event.inputs.home }}!"
