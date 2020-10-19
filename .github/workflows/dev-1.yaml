@@ -1,7 +1,7 @@
 name: dev-branch-workflow-1
 
 on:
-  push:
+  workflow_dispatch:
     branches: [ dev ]
   pull_request:
     branches: [ dev ]
