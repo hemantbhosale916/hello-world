@@ -23,6 +23,6 @@ jobs:
         curl \
            -X POST \
            -H "Accept: application/vnd.github.v3+json" \
-           -H 'Authorization: mygithubtoken 8f12600b528476620dea1005c7000a2ac31ddfa4' \
+           -H 'Authorization: mygithubtoken' \
             https://api.github.com/repos/hemantbhosale916/hello-world/actions/workflows/wfd-dev.yaml/dispatches \
            -d '{"ref":"dev"}'
