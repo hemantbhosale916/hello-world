@@ -1,4 +1,4 @@
-name: Master branch - Manually triggered workflow 
+name: dev branch - Manually triggered workflow 
 on:
   workflow_dispatch:
     inputs:
