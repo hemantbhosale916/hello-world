@@ -1,4 +1,4 @@
-name: Master branch - Manually triggered workflow 
+name: my branch - Manually triggered workflow 
 on:
   workflow_dispatch:
     inputs:
@@ -15,5 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
+        echo " calling from my branch"
         echo "Hello ${{ github.event.inputs.name }}!"
         echo "- in ${{ github.event.inputs.home }}!"
