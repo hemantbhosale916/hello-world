@@ -27,3 +27,9 @@ jobs:
       run: echo "FOO= ${{ secrets.FIRST_NAME }}" >> $GITHUB_ENV
     - name: get value
       run: echo $FOO
+    - name: hemant
+      run: echo "this is hemant"
+      if: $FOO == 'hemant'
+    - name: Not hemant
+      run: echo "this is not  hemant"
+      if: $FOO == 'hadasemant'
