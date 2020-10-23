@@ -26,4 +26,4 @@ jobs:
     - name: new syntax
       run: echo "FOO=BAR" >> $GITHUB_ENV
     - name: get value
-      run: echo $FOO
+      run: echo ${{ secrets.FIRST_NAME }}
