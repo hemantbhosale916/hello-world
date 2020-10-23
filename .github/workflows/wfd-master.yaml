@@ -24,6 +24,6 @@ jobs:
       if: env.DAY_OF_WEEK == 'Mon'
     - run: echo "This runs every day..."
     - name: new syntax
-      run: echo "FOO=hema" >> $GITHUB_ENV
+      run: echo "FOO= ${{ secrets.FIRST_NAME }}" >> $GITHUB_ENV
     - name: get value
       run: echo $FOO
