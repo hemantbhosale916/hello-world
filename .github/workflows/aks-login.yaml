@@ -1,1 +1,27 @@
 
+name: AKS Login
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
+      home:
+        description: 'location'
+        required: false
+
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo " calling from my branch"
+        echo "Hello ${{ github.event.inputs.name }}!"
+        echo "- in ${{ github.event.inputs.home }}!"
+        
+    - run: echo "::set-env name=DAY_OF_WEEK::$( date +%a )"
+    - name: today is monday
+      if: env.DAY_OF_WEEK == 'Mon'
+      run: echo "Somebody has a case of the mondays!"
+      
