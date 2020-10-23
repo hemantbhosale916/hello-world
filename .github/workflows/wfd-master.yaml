@@ -23,3 +23,7 @@ jobs:
     - run: echo "Somebody has a case of the mondays!"
       if: env.DAY_OF_WEEK == 'Mon'
     - run: echo "This runs every day..."
+    - name: new syntax
+      run: echo "FOO=BAR" >> $GITHUB_ENV
+    - name: get value
+      run: echo $FOO
