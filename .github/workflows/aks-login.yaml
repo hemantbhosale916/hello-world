@@ -15,13 +15,13 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        echo " calling from my branch"
-        echo "Hello ${{ github.event.inputs.name }}!"
-        echo "- in ${{ github.event.inputs.home }}!"
-        
-    - run: echo "::set-env name=DAY_OF_WEEK::$( date +%a )"
-    - name: today is monday
-      if: env.DAY_OF_WEEK == 'Mon'
-      run: echo "Somebody has a case of the mondays!"
+       - uses: actions/checkout@v1
+       - uses: azure/setup-kubectl@v1
+         id: install
+       - uses: azure/aks-set-context@v1
+         with:
+           creds: ${{ env.AZ_CREDS }}
+           resource-group: ${{ github.event.deployment.environment }}
+           cluster-name: ${{ github.event.deployment.payload.clusterName }}
+         id: login
       
