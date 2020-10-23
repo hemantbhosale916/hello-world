@@ -20,8 +20,8 @@ jobs:
          id: install
        - uses: azure/aks-set-context@v1
          with:
-           creds: ${{ env.AZ_CREDS }}
-           resource-group: ${{ github.event.deployment.environment }}
-           cluster-name: ${{ github.event.deployment.payload.clusterName }}
+           creds: ${{ env.MY_AKS_CRED }}
+           resource-group: azure-k8stest
+           cluster-name: mycluster
          id: login
       
