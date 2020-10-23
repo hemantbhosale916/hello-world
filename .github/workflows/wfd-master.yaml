@@ -26,4 +26,4 @@ jobs:
     - name: new syntax
       run: echo "FOO=hema" >> $GITHUB_ENV
     - name: get value
-      run: echo ${env.FOO}
+      run: echo $FOO
