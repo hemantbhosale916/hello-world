@@ -29,7 +29,7 @@ jobs:
       run: echo $FOO
     - name: hemant
       run: echo "this is hemant"
-      if: $FOO == 'hemant'
+      if: env.FOO == 'hemant'
     - name: Not hemant
       run: echo "this is not  hemant"
-      if: $FOO == 'hadasemant'
+      if: env.FOO == 'hadasemant'
