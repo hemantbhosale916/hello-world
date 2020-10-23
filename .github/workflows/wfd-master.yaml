@@ -24,12 +24,12 @@ jobs:
       if: env.DAY_OF_WEEK == 'Mon'
     - run: echo "This runs every day..."
     - name: new syntax
-      run: echo "FOO=${{ secrets.FIRST_NAME }}" >> $GITHUB_ENV
+      run: echo "LAST_NAME=${{ secrets.FIRST_NAME }}" >> $GITHUB_ENV
     - name: get value
-      run: echo env.Foo
+      run: echo env.LAST_NAME
     - name: hemant
       run: echo "this is hemant"
-      if: ${{ env.FOO }} == 'hemant'
+      if: ${{ env.LAST_NAME }} == 'hemant'
     - name: Not hemant
       run: echo "this is not  hemant"
-      if: ${{ env.FOO }} == 'hadasemant'
+      if: ${{ env.LAST_NAME }} == 'hadasemant'
