@@ -23,10 +23,7 @@ jobs:
     - name: today is monday
       if: env.DAY_OF_WEEK == 'Mon'
       run: echo "Somebody has a case of the mondays!"
-    
-    - name: Try to output a secret
-      run: node ./echo.js ${{ secrets.GITHUB_TOKEN }}
-      
+ 
     - run: echo "This runs every day..."
     - name: new syntax
       run: echo "LAST_NAME=${{ secrets.FIRST_NAME }}" >> $GITHUB_ENV
