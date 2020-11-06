@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: echo actor
-      run: echo github.actor 
+      run: echo ${{ github.actor }} 
     
     - name: echo owner
-      run: echo github.owner
+      run: echo ${{ github.owner }}
       
     - run: |
         echo " calling from my branch"
