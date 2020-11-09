@@ -18,7 +18,7 @@ jobs:
       run: echo ${{ github.actor }} 
     
     - name: echo owner
-      run: echo ${{ github.owner }}
+      run: echo ${{ github.repository_owner	 }}
       
     - run: |
         echo " calling from my branch"
