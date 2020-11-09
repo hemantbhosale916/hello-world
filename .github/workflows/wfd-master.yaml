@@ -10,10 +10,11 @@ on:
         description: 'location'
         required: false
 
+
 jobs:
   say_hello:
     runs-on: ubuntu-latest
-    if: ${{ github.actor }} == ${{ github.repository_owner	 }}
+    if: ${{ github.actor }} == hemant
     steps:
     - name: echo actor
       run: echo ${{ github.actor }} 
