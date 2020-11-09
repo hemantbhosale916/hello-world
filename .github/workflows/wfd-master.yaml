@@ -16,8 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: echo actor
+      if: ${{ github.actor }} == czzx
       run: echo ${{ github.actor }} 
-      if: ${{ github.actor }} == hemant
+      
     
     - name: echo owner
       run: echo ${{ github.repository_owner	 }}
