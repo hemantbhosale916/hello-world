@@ -13,11 +13,11 @@ on:
 
 jobs:
   say_hello:
-    if: ${{ github.actor }} == hemant
     runs-on: ubuntu-latest
     steps:
     - name: echo actor
       run: echo ${{ github.actor }} 
+      if: ${{ github.actor }} == hemant
     
     - name: echo owner
       run: echo ${{ github.repository_owner	 }}
