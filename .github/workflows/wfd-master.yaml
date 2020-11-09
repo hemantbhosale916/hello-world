@@ -13,10 +13,10 @@ on:
 
 jobs:
   say_hello:
+    if: github.actor != github.repository_owner
     runs-on: ubuntu-latest
     steps:
     - name: echo actor
-      if: github.actor != github.repository_owner
       run: echo ${{ github.actor }} 
       
     
