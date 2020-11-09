@@ -13,8 +13,8 @@ on:
 
 jobs:
   say_hello:
-    runs-on: ubuntu-latest
     if: ${{ github.actor }} == hemant
+    runs-on: ubuntu-latest
     steps:
     - name: echo actor
       run: echo ${{ github.actor }} 
