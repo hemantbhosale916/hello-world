@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: echo actor
-      if: ${{ github.actor }} == czzx
+      if: 1==2
       run: echo ${{ github.actor }} 
       
     
