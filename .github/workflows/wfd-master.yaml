@@ -13,7 +13,7 @@ on:
 
 jobs:
   say_hello:
-    if: github.actor != github.repository_owner
+    #if: github.actor != github.repository_owner
     runs-on: ubuntu-latest
     steps:
     - name: echo actor
