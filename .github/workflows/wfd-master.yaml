@@ -19,7 +19,13 @@ jobs:
     - name: echo actor
       run: echo ${{ github.actor }} 
       
-    
+    - name: "Check if user has write access"
+      uses: "lannonbr/repo-permission-check-action@2.0.0"
+      with:
+        permission: "write"
+      env:
+        GITHUB_TOKEN: ${{ secrets.MYGITHUBTOKEN }}
+   
     - name: echo owner
       run: echo ${{ github.repository_owner	 }}
       
