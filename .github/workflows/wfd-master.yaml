@@ -16,8 +16,11 @@ jobs:
     #if: github.actor != github.repository_owner
     runs-on: ubuntu-latest
     steps:
-    - name: change appversion
-      run: echo "hello"
+    - name: test  
+      uses: datamonsters/replace-action
+      with:
+        files: 'server/Chart.yaml'
+        replacements: 'appVersion: 1.16.0,appVersion: 2.0.0'
       
     - name: echo actor
       run: echo ${{ github.actor }} 
