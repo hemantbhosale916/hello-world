@@ -17,7 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: change appversion
-      run: sed -i -E "s/^appVersion: (.*)/appVersion: 3.0.0" server/Chart.yaml
+      run: echo "hello"
+      
     - name: echo actor
       run: echo ${{ github.actor }} 
       
